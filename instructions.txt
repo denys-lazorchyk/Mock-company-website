@@ -1,0 +1,6 @@
+FIXED:
+
+TO FIX:
+delete outline from form
+fix carousel
+youtube video fix
