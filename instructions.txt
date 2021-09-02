@@ -1,6 +1,10 @@
 FIXED:
+youtube video fix
+delete outline from form
 
 TO FIX:
-delete outline from form
 fix carousel
-youtube video fix
+find new brands
+new colors
+fix responsiveness
+find new images

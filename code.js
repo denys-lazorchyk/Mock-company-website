@@ -23,7 +23,7 @@ if (window.screen.width > 1400) {
 		bookMeet.style.transition = "translate 0.05s, box-shadow 0.4s";
 
 		let x = e.clientX / 20 - bookMeet.getBoundingClientRect().height / 2;
-		let y = e.clientY / 10;
+		let y = e.clientY / 10 - 33;
 
 		bookMeet.style.left = `${x}px`;
 		bookMeet.style.top = `${y}px`;
@@ -32,13 +32,10 @@ if (window.screen.width > 1400) {
 	section1.addEventListener("mouseout", () => {
 		bookMeet.style.left = `0px`;
 		bookMeet.style.top = `0px`;
-		bookMeet.style.boxShadow = `rgba(255, 255, 255, 0.4) 0px 5px,
-		rgba(255, 255, 255, 0.3) 0px 10px, rgba(255, 255, 255, 0.2) 0px 15px,
-		rgba(255, 255, 255, 0.1) 0px 20px, rgba(255, 255, 255, 0.05) 0px 25px;`;
+		bookMeet.style.transition = "all 0.4s";
 	});
 
 	bookMeet.addEventListener("mouseenter", () => {
 		bookMeet.style.transition = "all 0.4s";
-		console.log("hello there");
 	});
 }
