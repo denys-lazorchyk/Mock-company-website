@@ -36,6 +36,7 @@ h2 {
 	font-weight: lighter;
 	font-size: 35px;
 	line-height: 45px;
+	text-align: center;
 }
 
 p {
@@ -107,7 +108,7 @@ a {
 .logo {
 	width: 85px !important;
 	height: auto;
-	margin-bottom: 40px;
+	margin: 40px 0px;
 }
 
 .welcome {
@@ -144,6 +145,9 @@ a {
 	margin: 66px 0px;
 }
 
+.section-2 h2 {
+	text-align: left;
+}
 /* /////////////////////// */
 /* SECTION-3 */
 /* /////////////////////// */
@@ -155,9 +159,8 @@ a {
 }
 
 .section-3 h2 {
-	margin: 76px 0px 66px 0px;
+	margin: 66px 0px 66px 0px;
 	line-height: 35px;
-	text-align: center;
 }
 
 iframe {
@@ -204,6 +207,7 @@ iframe {
 
 .image {
 	background-image: url(./Imgs/img-side2.jpg);
+	background-position: center;
 	min-height: 512px;
 	height: inherit;
 	background-size: cover;
@@ -215,19 +219,27 @@ iframe {
 	margin-bottom: 60px;
 }
 
+.section-4 h2 {
+	text-align: left;
+}
+
 /* /////////////////////// */
 /* SECTION-5 */
 /* /////////////////////// */
 .section-5 h2 {
 	margin: 60px 0px 30px 0px;
 	padding-top: 50px;
-	text-align: center;
 }
 
-.slick-prev::before,
-.slick-next::before {
-	background-image: url("./Imgs/slider-arrow.svg");
-	background-size: cover;
+.slick-prev:before,
+.slick-next:before {
+	font-size: 30px !important;
+	color: var(--yellowish-color) !important;
+	transform: translateX(-20px);
+}
+
+.slick-dots {
+	bottom: -45px !important;
 }
 
 .quote {
@@ -256,7 +268,8 @@ iframe {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin: 65px 0px;
+	flex-wrap: wrap;
+	margin: 120px 0px 60px 0px;
 }
 
 /* /////////////////////// */
@@ -269,11 +282,10 @@ iframe {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 60px 0px;
+	padding: 80px 0px 20px 0px;
 }
 
 .section-6 h2 {
-	text-align: center;
 	display: block;
 	width: 560px;
 }
@@ -296,11 +308,10 @@ textarea {
 }
 
 form label {
-	font-size: 20;
+	font-size: 20px;
 	font-weight: lighter;
 	line-height: 20px;
 	margin: 0px 7px;
-	width: 100%;
 }
 
 input[type="text"],
@@ -333,6 +344,7 @@ textarea {
 .custom-checkbox + label {
 	display: inline-flex;
 	align-items: center;
+	z-index: 3;
 }
 
 .custom-checkbox + label::before {
@@ -370,6 +382,13 @@ form button {
 }
 
 @media screen and (max-width: 1600px) {
+	.section-1 {
+		min-height: 720px;
+	}
+	.logo {
+		padding-top: 50px;
+	}
+
 	.padding-me {
 		padding: 0px 105px;
 	}
@@ -397,8 +416,20 @@ form button {
 }
 
 @media (max-width: 1050px) {
+	p {
+		font-size: 20px;
+	}
+
 	.padding-me {
 		padding: 0px 75px;
+	}
+
+	.welcome {
+		padding-bottom: 10px;
+	}
+
+	.logo {
+		height: 130px;
 	}
 
 	.section-1,
@@ -413,18 +444,35 @@ form button {
 		margin: -66px 0px 33px 0px;
 	}
 
-	.section-2 > div {
-		width: 70%;
-		margin: 66px 0px;
+	.section-3 h2 {
+		margin: 40px 0px;
+	}
+
+	.imageDiv {
+		width: 100% !important;
 	}
 
 	.man {
+		margin-left: 40vw;
+		width: 60vw;
+		height: auto;
 		float: none;
+	}
+
+	.section-3 > div {
+		width: 100%;
+	}
+	.slick-prev,
+	.slick-next {
+		opacity: 0;
+	}
+
+	.clients {
+		justify-content: center;
 	}
 
 	iframe {
 		width: 100%;
-		height: auto;
 	}
 
 	.section-4 {
@@ -432,15 +480,31 @@ form button {
 		flex-direction: column;
 	}
 
+	.section-4 h2 {
+		text-align: center;
+	}
+
 	.section-4 > div {
+		padding: 60px 50px;
 		width: 100%;
 		margin: 0px;
+	}
+
+	.lorem-me {
+		min-height: auto;
+	}
+
+	.section-6 h2 {
+		text-align: left;
 	}
 }
 
 @media (max-width: 800px) {
-	.services,
-	.clients {
+	h2 {
+		font-size: 30px;
+	}
+
+	.services {
 		flex-direction: column;
 	}
 
@@ -451,14 +515,41 @@ form button {
 	.section-6 {
 		padding: 20px;
 	}
+
 	.section-6 form {
 		width: 100%;
-		padding: 50px 50px 10px 50px;
+		padding: 30px 30px 10px 30px;
 		margin: 0;
 	}
 
 	.section-6 h2 {
-		width: 60%;
-		margin-bottom: -20px;
+		width: 90%;
+	}
+
+	.paralax {
+		width: 100%;
+		max-width: 600px;
+	}
+
+	.padding-me {
+		padding: 0px 40px;
+	}
+
+	#submit {
+		margin: 20px 0px;
+	}
+
+	.custom-checkbox + label,
+	.section-6 p {
+		font-size: 16px;
+	}
+
+	.credentials {
+		justify-content: center;
+		margin-top: -10px;
+	}
+
+	.section-6 img {
+		width: 50px;
 	}
 }

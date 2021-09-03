@@ -55,7 +55,7 @@
         Cras euismod congue nunc id convallis.
       </p>
     </div>
-    <div>
+    <div class='imageDiv'>
       <img src="./Imgs/img-side1.jpg" alt="Some random photo" />
     </div>
   </section>
@@ -213,13 +213,32 @@
 
   <script type="text/javascript">
     let props = {
+      dots: true,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 2,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1124,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        }
+      ]
     };
-    if (window.screen.width < 800) props = {};
-    console.log(props);
-
     $(document).ready(function () {
       $(".paralax").slick(props);
     });
